@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for displaying a single view for a domain object
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        Show.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <div class="new-data-create pr-4"><span class="h4 float-left w-50 mb-3"><i class="fas fa-info-circle">&nbsp;</i>Detail View</span><span class="h4 float-right w-50 text-right"><i class="fas fa-plus-circle">&nbsp;</i><f:link.action action="new">Add Customer</f:link.action></span></div>
+    <f:flashMessages />
+    <f:render partial="Customer/Properties" arguments="{customer:customer}" />
+    <div class="new-data-create text-right pr-4 mb-3"><span class="h4"><i class="fas fa-arrow-circle-left">&nbsp;</i><f:link.action action="list">List Customer</f:link.action></span></div>
+</f:section>
+</html>

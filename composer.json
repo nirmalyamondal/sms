@@ -1,0 +1,24 @@
+{
+    "name": "ashokatree/sms",
+    "type": "typo3-cms-extension",
+    "description": "Send SMS to FE Users via UI.",
+    "version": "10.0.0",
+    "authors": [
+        {
+            "name": "Nirmalya Mondal",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "typo3/cms-core": "^10.4.12"
+    },
+    "autoload": {
+        "psr-4": {
+            "AshokaTree\\Sms\\": "Classes"
+        }
+    },
+    "replace": {
+        "ashokatree/sms": "self.version",
+        "typo3-ter/sms": "self.version"
+    }
+}

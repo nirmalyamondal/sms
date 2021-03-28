@@ -1,0 +1,18 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<label for="fromsms">
+	<f:translate key="tx_sms_domain_model_sms.fromsms" />
+</label><br />
+	<f:form.textfield property="fromsms" value="ADITYA" additionalAttributes="{required:'required', pattern:'[0-9]+', readonly: 'readonly', autocomplete:'off'}" placeholder="SMS Sender Id" /><br />
+
+<label for="tosms">
+	<f:translate key="tx_sms_domain_model_sms.tosms" />
+</label><br />
+	<f:form.select multiple="100" size="10" property="tosms" options="{allUsers}" optionValueField="key" optionLabelField="value" /><br />
+
+<label for="message">
+	<f:translate key="tx_sms_domain_model_sms.message" /> <span class="small">[e.g. Ashoka Tree wishes you a Happy Birthday!]</span>
+</label><br />
+	<f:form.textarea property="message" placeholder="Wish you a happy birthday! - Ashoka Tree" additionalAttributes="{minlength: '5',maxlength: '50', required:'required', autocomplete:'off'}" /><br />
+
+</html>

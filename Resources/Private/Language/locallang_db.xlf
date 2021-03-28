@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:sms/Resources/Private/Language/locallang_db" date="2021-01-17T19:49:21Z" product-name="sms">
+		<header/>
+		<body>
+			<trans-unit id="tx_sms_domain_model_sms" resname="tx_sms_domain_model_sms">
+				<source>Sms</source>
+			</trans-unit>
+			<trans-unit id="tx_sms_domain_model_sms.feuser" resname="tx_sms_domain_model_sms.feuser">
+				<source>Operator</source>
+			</trans-unit>
+			<trans-unit id="tx_sms_domain_model_sms.fromsms" resname="tx_sms_domain_model_sms.fromsms">
+				<source>From SMS</source>
+			</trans-unit>
+			<trans-unit id="tx_sms_domain_model_sms.tosms" resname="tx_sms_domain_model_sms.tosms">
+				<source>To SMS</source>
+			</trans-unit>
+			<trans-unit id="tx_sms_domain_model_sms.senddate" resname="tx_sms_domain_model_sms.senddate">
+				<source>Send Date</source>
+			</trans-unit>
+			<trans-unit id="tx_sms_domain_model_sms.message" resname="tx_sms_domain_model_sms.message">
+				<source>Message</source>
+			</trans-unit>
+			<trans-unit id="tx_sms_pi1.name" resname="tx_sms_pi1.name">
+				<source>SMS Management</source>
+			</trans-unit>
+			<trans-unit id="tx_sms_pi1.description" resname="tx_sms_pi1.description">
+				<source>Sending text SMS to Users through UI.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

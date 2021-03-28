@@ -1,0 +1,78 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+This Template is responsible for creating a table of domain objects.
+
+If you modify this template, do not forget to change the overwrite settings
+in /Configuration/ExtensionBuilder/settings.yaml:
+  Resources:
+    Private:
+      Templates:
+        List.html: keep
+
+Otherwise your changes will be overwritten the next time you save the extension in the extension builder
+
+<f:section name="content">
+    <div class="new-data-create pr-4"><span class="h4 float-left w-50 mb-3"><i class="fas fa-list">&nbsp;</i> Listing</span></div>
+    <f:flashMessages />
+
+    <table  class="tx_management tablesorter tablesorter-blue" id="tx_management_domain_model_customer_table" >
+        <thead>
+        <tr>
+            <th class="sortStyle"><f:translate key="tx_management_domain_model_customer.username" /></th>
+            <th class="sortStyle"><f:translate key="tx_management_domain_model_customer.name" /></th>
+            <th class="sortStyle"><f:translate key="tx_management_domain_model_customer.telephone" /></th>
+            <th class="sortStyle"><f:translate key="tx_management_domain_model_customer.zip" /></th>
+            <th class="sortStyle"><f:translate key="tx_management_domain_model_customer.email" /></th>
+            <th colspan="3" class="sorter-false"><i class="fas fa-plus-circle">&nbsp;</i><f:link.action action="new">Add Customer</f:link.action></th>
+        </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th><f:translate key="tx_management_domain_model_customer.username" /></th>
+                <th><f:translate key="tx_management_domain_model_customer.name" /></th>
+                <th><f:translate key="tx_management_domain_model_customer.telephone" /></th>
+                <th><f:translate key="tx_management_domain_model_customer.zip" /></th>
+                <th><f:translate key="tx_management_domain_model_customer.email" /></th>
+                <th colspan="3"><i class="fas fa-plus-circle">&nbsp;</i><f:link.action action="new">Add Customer</f:link.action></th>
+            </tr>
+            <tr>
+              <td colspan="15">
+                <div class="pager" id="tx_management_domain_model_customer_pager">
+                  <nav class="left">
+                    Tickets per page:
+                    <a href="#" class="current">10</a> |
+                    <a href="#">25</a> |
+                    <a href="#">50</a> |
+                    <a href="#">100</a>
+                  </nav>
+                  <nav class="right">
+                    <span class="prev">
+                      <img src="typo3conf/ext/management/Resources/Public/Images/prev.png" /> Prev&nbsp;
+                    </span>
+                    <span class="pagecount"></span>
+                    &nbsp;<span class="next">Next
+                      <img src="typo3conf/ext/management/Resources/Public/Images/next.png" />
+                    </span>
+                  </nav>
+                </div>
+              </td>
+            </tr>
+        </tfoot> 
+        <tbody>    
+        <f:for each="{customers}" as="customer">
+            <tr>
+                <td>{customer.username}</td>
+                <td>{customer.name}</td>
+                <td>{customer.telephone}</td>
+                <td>{customer.zip}</td>
+                <td>{customer.email}</td>
+                <td><f:link.action action="show" arguments="{customer : customer.uid}"><i class="fas fa-arrow-circle-right">&nbsp;</i>Detail</f:link.action></td>
+                <td><f:link.action action="edit" arguments="{customer : customer.uid}"><i class="fas fa-pen-square">&nbsp;</i>Edit</f:link.action></td>
+                <td><f:link.action action="delete" arguments="{customer : customer.uid}" onclick="return confirm('Are you sure to DELETE?')" ><i class="fas fa-trash">&nbsp;</i>Delete</f:link.action></td>
+            </tr>
+        </f:for>
+        </tbody>
+    </table>
+</f:section>
+</html>

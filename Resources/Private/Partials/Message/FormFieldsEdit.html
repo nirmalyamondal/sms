@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<label for="username">
+	<f:translate key="tx_management_domain_model_customer.username" />
+</label><br />
+	<f:form.textfield property="username" additionalAttributes="{max:'999999999',minlength: '10',maxlength: '10',required:'required', pattern:'[0-9]+',type: 'tel', readonly: 'readonly', autocomplete:'off'}" placeholder="Username" /><br />
+<label for="telephone">
+	<f:translate key="tx_management_domain_model_customer.telephone" />
+</label><br />
+	<f:form.textfield property="telephone" additionalAttributes="{max:'999999999',minlength: '10',maxlength: '10',required:'required', pattern:'[0-9]+',type: 'tel', autocomplete:'off'}" placeholder="Telephone" /><br />
+<label for="name">
+	<f:translate key="tx_management_domain_model_customer.name" />
+</label><br />
+	<f:form.textfield property="name" placeholder="Name Title" additionalAttributes="{minlength: '5',maxlength: '20', required:'required', autocomplete:'off'}"  /><br />
+<label for="address">
+	<f:translate key="tx_management_domain_model_customer.address" />
+</label><br />
+	<f:form.textfield property="address" placeholder="House No, Street, District" additionalAttributes="{minlength: '5',maxlength: '50', required:'required', autocomplete:'off'}" /><br />
+<label for="zip">
+	<f:translate key="tx_management_domain_model_customer.zip" />
+</label><br />
+	<f:form.textfield property="zip" additionalAttributes="{required:'required', minlength:'6', maxlength:'6', pattern:'[0-9]+', autocomplete:'off'}" placeholder="Zip"/><br />	
+<label for="brand">
+	<f:translate key="tx_management_domain_model_customer.email" />
+</label><br />
+	<f:form.textfield property="email" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" additionalAttributes="{required:'required',type: 'email', autocomplete:'off'}" placeholder="Email" /><br />
+
+</html>
